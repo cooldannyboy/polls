@@ -31,14 +31,14 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     # to override the admin's template polls_app has to be in front of admin
-    'polls_app',
+    #'polls_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'polls_app'
+    'polls_app'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,7 +88,7 @@ STATIC_URL = '/static/'
 
 TEMPLATES = [
     {
-       'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -104,4 +104,15 @@ TEMPLATES = [
 
 #TEMPLATE_DIRS = (
 #    os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
+#)
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+
+#make sure the order of the remplate loader
+
+#TEMPLATE_LOADERS = (
+#    'django.template.loaders.filesystem.Loader',
+#    'django.template.loaders.app_directories.Loader',
 #)
