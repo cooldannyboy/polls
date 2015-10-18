@@ -8,6 +8,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'polls.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    # url(r'^grappelli/', include('grappelli.urls')), need install
+
     url(r'^polls_app/', include('polls_app.urls', namespace="polls_app")),
     url(r'^admin/', include(admin.site.urls)),
 #    url(r'^test/$', index),

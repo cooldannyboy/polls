@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     # to override the admin's template polls_app has to be in front of admin
     #'polls_app',
+    # 'grappelli', need to be installed
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
